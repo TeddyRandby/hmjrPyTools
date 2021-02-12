@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = "0.0.3"
+VERSION = "0.0.4"
 DESCRIPTION = "A collection of tools for analyzing the HMJR Collection."
 LONG_DESCRIPTION = "A collection of tools for analyzing the HMJR Collection."
 
@@ -15,7 +15,7 @@ setup(
     install_requires=['python-graphql-client'],
     keywords=['archives','analysis'],
     url="https://github.com/TeddyRandby/hmjrPyTools",
-    download_url="https://github.com/TeddyRandby/hmjrPyTools/archive/0.0.3.tar.gz",
+    download_url="https://github.com/TeddyRandby/hmjrPyTools/archive/0.0.4.tar.gz",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Education",

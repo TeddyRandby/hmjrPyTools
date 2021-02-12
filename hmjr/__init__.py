@@ -1,2 +1,2 @@
-# import functions to build into module here.
-from .hmjr import example
+from .Entries import Entries
+from .SortedBy import By
