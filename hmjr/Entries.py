@@ -11,6 +11,7 @@ def validateBook(book):
     return strBook
 
 BAD_CHARS = "\""
+BAD_WORDS = "of and to for Book Page in by on from with See"
 DEFAULT_MAX = 50
 
 class Entries:
@@ -86,12 +87,12 @@ class Entries:
         except:
             print("No results found. Try running a query first.")
 
-    def associate(self, words):
+    def associate(self, words, badWords=BAD_WORDS):
         indexes = self.indexes()
         if indexes.any():
             containedStrs = [s["content"] for s in indexes for word in words if s["content"] is not None if word in s["content"]]
             words = [word for s in containedStrs for word in s.split(" ") ]
-            return {word:words.count(word) for word in words}
+            return {word:words.count(word) for word in words if word not in badWords}
 
     # Make a raw GQL query to the hmjrapi backend.
     def query(self, query, variables, name):
