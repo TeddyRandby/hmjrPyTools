@@ -195,7 +195,7 @@ class Entries:
                     }
                     indexes {
                         book
-                        pag
+                        page
                         content
                     }
                 }

@@ -68,6 +68,10 @@ class Entries:
         except:
             print("No results found. Try running a query first.")
 
+    def headerCounts(self):
+        unique, counts = np.unique(self.headers(), return_counts=True)
+        return dict(zip(unique, counts))
+
     # Return a numpy array of all the words in all headers. Repetitions are allowed.
     def contentWords(self, badChars=BAD_CHARS):
         try:
@@ -195,7 +199,7 @@ class Entries:
                     }
                     indexes {
                         book
-                        pag
+                        page
                         content
                     }
                 }
