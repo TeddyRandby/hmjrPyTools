@@ -2,7 +2,6 @@ README.md
 setup.py
 hmjr/Entries.py
 hmjr/Query.py
-hmjr/SortedBy.py
 hmjr/__init__.py
 hmjr.egg-info/PKG-INFO
 hmjr.egg-info/SOURCES.txt

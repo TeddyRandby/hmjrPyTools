@@ -49,18 +49,25 @@ class Query:
         return self.query(query, variables)
 
     def withDates(self, dates):
+        """Query entries with at least one date greater than the minimum given and less than the maximum given."""
         self.dates = dates
         return self
 
     def withKeywords(self, keywords):
+        """Query entries which contain at least one word in the keywords given in their content or header."""
         self.keywords = keywords
         return self
 
     def withBook(self, books):
+        """Query entries from the books given."""
         self.books = books
         return self
 
     def withBookBetween(self, minBook, maxBook):
         """Query entries between two books, including the lower bound."""
         return self.withBook([x for x in range(minBook, maxBook, 1)])
+
+    def withDateBetween(self, dateA, dateB):
+        """Query entries with at least one date between the given dates."""
+        return self.withDates([dateA, dateB])
 

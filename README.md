@@ -105,7 +105,5 @@ We've dropped the `.entries` off the end of our query, and are storing the resul
     entries.associate(["HMJr"])
 
 What the `associate()` method does is take a list of words, and rank the
- appearences of **every** other word in proximity to this word. A little complex,
- but it should make sense with an example.
-
-    TODO
+ appearences of **every** other word in proximity to this word. "Proximity" is defined
+ as appearing with at least one of the given words in the content of an **Index**.
