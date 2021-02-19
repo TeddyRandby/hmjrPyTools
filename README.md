@@ -68,7 +68,7 @@ same way that we saw earlier.
 
 Heres our next query:
 
-    Query().withKeyword(["Refugee", "refugee"]).run().entries
+    Query().withKeywords(["Refugee", "refugee"]).run().entries
 
 We see another list, which works the same way as our previous list. This time we
 have quotes around words to differentiate them from code - don't forget the quotes.
@@ -76,7 +76,7 @@ have quotes around words to differentiate them from code - don't forget the quot
 
 Heres the last kind of query we can do:
 
-    Query().withDate({"day": 1, "month": 1, "year":44}).run().entries
+    Query().withDates({"day": 1, "month": 1, "year":44}).run().entries
 
 Earlier we saw a python list with the square brackets, this notation is called
  a dictionary, and it holds any number of key:value pairs. Here, our query
@@ -87,7 +87,7 @@ Now that we've got all the queries working individually, we can combine them
 
 Try something like:
 
-    Query().withKeyword(["Camp", "camp"]).withBookBetween(738, 349).run().entries
+    Query().withKeywords(["Camp", "camp"]).withBookBetween(738, 349).run().entries
 
 Your results should have entries with "Camp" or "camp" in their text, in a
  volume between 738 and 749.
@@ -96,7 +96,7 @@ Now we can make complex queries on the data, lets look at how we can analyze it.
 
 After we use the `run()` method, we get a different object back.
 
-    entries = Query().withKeyword(["Camp", "camp"]).withBookBetween(738, 349).run()
+    entries = Query().withKeywords(["Camp", "camp"]).withBookBetween(738, 749).run()
 
 We've dropped the `.entries` off the end of our query, and are storing the result
  of `run()` in the variable entries. This result has more to it than just a list
