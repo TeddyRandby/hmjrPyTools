@@ -114,13 +114,13 @@ They work just like the `associate()` method, taking a list of words. They both 
  counts the appearences of the words over the books or over the dates in the entries.
 
 There are some additional helper methods, such as:
- -`headerCounts()` counts the occurences of each unique header in the entries
- -`headerWords()` returns a dictionary counting the unique words in the headers
- -`contentWords()` returns a dictionary counting the unique words in the content 
- -`words` returns the combination of `headerWords()` and `contentWords()`
- -`headers()` returns an array of the header strings in the entries, not sorted
- -`content()` returns an array of the content strings in the entries, not sorted
- -`dates()` returns an array of the date dictionaries in the entries, not sorted
- -`indexes()` returns an array of the index dictionaries in the entries, not sorted
- -`dateRange()` returns the tuple (minimumDate, maximumDate) mentioned in the entries
- -`bookRange()` returns the tuple (minimumBook, maximumBook) mentioned in the entries
+ - `headerCounts()` counts the occurences of each unique header in the entries
+ - `headerWords()` returns a dictionary counting the unique words in the headers
+ - `contentWords()` returns a dictionary counting the unique words in the content 
+ - `words` returns the combination of `headerWords()` and `contentWords()`
+ - `headers()` returns an array of the header strings in the entries, not sorted
+ - `content()` returns an array of the content strings in the entries, not sorted
+ - `dates()` returns an array of the date dictionaries in the entries, not sorted
+ - `indexes()` returns an array of the index dictionaries in the entries, not sorted
+ - `dateRange()` returns the tuple (minimumDate, maximumDate) mentioned in the entries
+ - `bookRange()` returns the tuple (minimumBook, maximumBook) mentioned in the entries
