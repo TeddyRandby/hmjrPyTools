@@ -107,3 +107,20 @@ We've dropped the `.entries` off the end of our query, and are storing the resul
 What the `associate()` method does is take a list of words, and rank the
  appearences of **every** other word in proximity to this word. "Proximity" is defined
  as appearing with at least one of the given words in the content of an **Index**.
+ 
+There are two more methods for analyzing the data: the `deltaTime()` method and the `deltaBooks()` method.
+
+They work just like the `associate()` method, taking a list of words. They both return a dictionary which
+ counts the appearences of the words over the books or over the dates in the entries.
+
+There are some additional helper methods, such as:
+ -`headerCounts()` counts the occurences of each unique header in the entries
+ -`headerWords()` returns a dictionary counting the unique words in the headers
+ -`contentWords()` returns a dictionary counting the unique words in the content 
+ -`words` returns the combination of `headerWords()` and `contentWords()`
+ -`headers()` returns an array of the header strings in the entries, not sorted
+ -`content()` returns an array of the content strings in the entries, not sorted
+ -`dates()` returns an array of the date dictionaries in the entries, not sorted
+ -`indexes()` returns an array of the index dictionaries in the entries, not sorted
+ -`dateRange()` returns the tuple (minimumDate, maximumDate) mentioned in the entries
+ -`bookRange()` returns the tuple (minimumBook, maximumBook) mentioned in the entries
