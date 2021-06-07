@@ -18,6 +18,7 @@ class Query:
         """Make a raw GQL query to the hmjrapi backend."""
         try:
             data = self.client.execute(query=query,variables=variables)["data"][name]
+            print(len(data))
             return Entries(data)
         except Exception as e:
             print("Query resulted in error: " + e)
