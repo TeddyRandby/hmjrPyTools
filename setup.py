@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = "0.1.0"
+VERSION = "0.1.3"
 DESCRIPTION = "A collection of tools for analyzing the HMJR Collection."
 LONG_DESCRIPTION = "A collection of tools for analyzing the HMJR Collection."
 

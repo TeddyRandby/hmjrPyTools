@@ -65,8 +65,7 @@ class Entries:
     def indexes(self):
         """Return a numpy array of the result index dictionaries."""
         try:
-            tmp = [d for i in self.entries for d in i["indexes"] if d["page"] is not None]
-            return tmp
+            return np.array([d for i in self.entries for d in i["indexes"] if d["page"] is not None])
         except:
             print("No results found. Try running a query first.")
 
